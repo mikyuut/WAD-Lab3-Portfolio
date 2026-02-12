@@ -1,0 +1,192 @@
+body {
+    display: flex;
+    background-color: black;
+    height: 100vh;
+}
+
+.border {
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #e18b22;
+    color: white;
+    border-radius: 20px;
+    margin: 10px;
+    flex-grow: 1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #e18b22;
+    padding: 20px 44px 10px 25px;
+    position: relative;
+}
+
+header h2 {
+    margin: 0;
+}
+
+nav {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    gap: 5px;
+    border-bottom: 1px solid #e18b22;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 5px 10px;
+    color: white;
+    transition: 0.3s ease;
+}
+
+nav.show {
+    display: flex;
+}
+
+.about,
+.hobbies,
+.skills {
+    background-color: #e18b22;
+}
+
+#menu-toggle {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #e18b22;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main-about {
+    margin-top: 80px;
+}
+
+main h1 {
+    color: #e18b22;
+    text-align: center;
+}
+
+main p {
+    margin: 20px;
+    text-align: justify;
+}
+
+img {
+    border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
+    transition: 0.3s ease;
+}
+
+/* HOBBIES */
+#hobbies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    margin-top: 20px;
+}
+
+#hobbies img {
+    border-radius: 10px;
+    border: 2px solid #e18b22;
+    cursor: pointer;
+}
+
+.hobby-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hobby-item p {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.hobby-item img:hover {
+    transform: scale(1.1);
+}
+
+/* SKILLS */
+#skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+#skills img {
+    border-radius: 10px;
+    border: 2px solid #e18b22;
+    cursor: pointer;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-item p {
+    font-weight: bold;
+}
+
+.skill-item img:hover {
+    transform: scale(1.1);
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+    body {
+        margin: 50px 40px 40px;
+        height: 85vh;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        position: static;
+        width: auto;
+        border: none;
+        gap: 50px;
+    }
+
+    main {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #main-about {
+        margin-left: 150px;
+    }
+
+    #about-description {
+        max-width: 500px;
+        text-align: justify;
+        margin-left: 80px;
+    }
+
+    img {
+        width: 250px;
+        height: 250px;
+    }
+
+    #hobbies,
+    #skills {
+        display: flex;
+        gap: 30px;
+    }
+}
