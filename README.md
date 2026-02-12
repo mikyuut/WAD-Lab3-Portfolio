@@ -11,6 +11,35 @@ Welcome to my repository! This project contains information about me, my hobbies
 ## How to run the Project Locally
 
 1. Clone the repository:
+   ```bash
+   https://github.com/mikyuut/WAD-Lab3-Portfolio.git
+   ```
+2. Navigate the project directory:
+   ```
+   cd Portfolio
+   ```
+3. Install PHP dependecies:
+   ```bash
+   composer install
+   ```
+4. Create the environment file:
+   ```bash
+   copy .env.example .env
+   ```
+5. Generate application key:
+   ```bash
+   php artisan key:generate
+   ```
+6. Run the Laravel development server:
+   ```bash
+   php artisan serve
+   ```
+7. Open a browser and visit:
+   ```bash
+   http://127.0.0.1:8000/about
+   http://127.0.0.1:8000/hobbies
+   http://127.0.0.1:8000/skills
+   ```
 
 
 
